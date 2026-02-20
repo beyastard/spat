@@ -20,6 +20,10 @@ and drift of audio generations.
 git clone https://github.com/beyastard/spat
 cd spat
 
+# Create virtual environment (Windows example)
+python -m venv .venv
+.\.venv\Scripts\activate.Batch
+
 # Install dependencies
 pip install -r requirements.txt
 ```
