@@ -55,5 +55,13 @@ When `--plot` is enabled, `spat` generates a multi-pane report:
 - **Deterministic:** The tool uses standard signal processing (STFT/Onset Strength) rather than non-deterministic ML models for feature extraction.
 - **Stability Score:** Calculated as $e^{-\sigma/\tau}$ where $\sigma$ is the standard deviation of local BPM and $\tau$ is the decay constant, providing a 0.0–1.0 score of rhythmic steadiness.
 
+**Note:** _Stability_ _Score_ is defined as the following:
+| Score | Objective Meaning |
+| :--- | :--- |
+| 0.9–1.0 | Near-constant tempo |
+| 0.6–0.9 | Mild drift / expressive variation |
+| 0.3–0.6 | Unstable tempo |
+| < 0.3 | Severe instability |
+
 ## License
 This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) file for details.
