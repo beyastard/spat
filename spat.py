@@ -85,7 +85,8 @@ def analyze_audio(file_path, plot=False, out_path=None, out_format="png"):
     results = {
         "file": os.path.basename(file_path),
         "duration_sec": duration,
-        "global_bpm": float(tempo),
+        # "global_bpm": float(tempo),
+        "global_bpm": float(tempo[0]) if tempo.size > 0 else 0.0,
         "local_bpm_min": float(np.min(local_bpm)) if len(local_bpm) else np.nan,
         "local_bpm_mean": float(np.mean(local_bpm)) if len(local_bpm) else np.nan,
         "local_bpm_max": float(np.max(local_bpm)) if len(local_bpm) else np.nan,
